@@ -349,7 +349,7 @@ img {
   #grillaintegrantes {
     display: grid;
     grid-template-rows: 260px 750px 750px;
-    grid-template-columns: 500px;
+    grid-template-columns: 400px;
     grid-template-areas:
       "nav"
       "fer"
@@ -359,9 +359,12 @@ img {
   }
 
   .intgrid1 ul {
-    margin-left: 22px;
+    
     height: 160px;
-    justify-content: center;
+  }
+
+  #grillaintegrantes img {
+    width: auto;
   }
 
   .logowpp {
