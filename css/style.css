@@ -319,10 +319,6 @@ img {
     font-size: 14px;
   }
 
-  .indexgrid2 {
-    position: initial;
-  }
-
   .bio {
     height: auto;
     width: 370px;
@@ -347,8 +343,6 @@ img {
     font-size: 40px;
     width: 300px;
     height: 60px;
-    position: relative;
-    left: 105px;
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -356,7 +350,7 @@ img {
   #grillaintegrantes {
     display: grid;
     grid-template-rows: 260px 750px 750px;
-    grid-template-columns: 501px;
+    grid-template-columns: 500px;
     grid-template-areas:
       "nav"
       "fer"
@@ -368,6 +362,7 @@ img {
   .intgrid1 ul {
     margin-left: 22px;
     height: 160px;
+    justify-content: center;
   }
 
   .logowpp {
