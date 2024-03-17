@@ -350,21 +350,25 @@ img {
   #grillaintegrantes {
     display: grid;
     grid-template-rows: 260px 750px 750px;
-    grid-template-columns: 400px;
+    grid-template-columns: 500px;
     grid-template-areas:
       "nav"
       "fer"
       "juan"
-      "lihue "
+      "lihue"
       "gonza";
   }
 
   .intgrid1 ul {
-    
-    height: 160px;
+   height: 160px;
+   margin-left: 30px;
   }
 
   #grillaintegrantes img {
+    width: auto;
+  }
+
+  .pint {
     width: auto;
   }
 
