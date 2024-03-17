@@ -308,6 +308,11 @@ img {
   #encabezado {
     font-size: 14px;
   }
+
+  .indexgrid2 {
+    position: initial;
+  } 
+  
   header .barradenavegacion a {
     padding-inline: 70px;
     margin-right: 20px;
