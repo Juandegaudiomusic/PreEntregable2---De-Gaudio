@@ -468,7 +468,6 @@ img {
   }
   #grilla .indexgrid2 .barradenavegacion a:hover {
     color: red;
-    font-size: 14px;
   }
   #grilla .indexgrid3 {
     border: solid 3px red;
@@ -515,7 +514,6 @@ img {
   }
   #grillaintegrantes .intgrid1 .barradenavegacion li a:hover {
     color: red;
-    font-size: 14px;
   }
   #grillaintegrantes .intgrid1 h1 {
     font-size: 40px;
