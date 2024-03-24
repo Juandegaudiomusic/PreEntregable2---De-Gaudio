@@ -8,6 +8,9 @@
 </head>
 
 <body>
+  <main class="maincont">
+    <h1>Contactanos</h1>
+
     <header id="encabezado">
         <nav class="barradenavegacion">
             <ul>
@@ -20,26 +23,26 @@
         </nav>
         
     </header>
-
-        <main class="maincont">
-            <h1>Calendario</h1>
-        </div>
-        <p>Dejanos tu mensaje</p>
+    
+    <div class="form">
+      <p>Dejanos tu mensaje</p>
         <form action="form.php" method="POST">
-          <div>
+          <div class="email">
             <label for="Correo electronico"></label>
             <input
               type="text"
               name="nombre"
               id="nombre"
               placeholder="Correo electronico"
+              size="100px"
             />
           </div>
-          
-          <textarea name="" id="" cols="40" rows="10"> </textarea>
+                 
+          <textarea name="" id="" cols="150" rows="30"> </textarea>
 
-        <div><input type="submit" value="Enviar" /></div>
+        <div><input type="submit" value="Enviar" style="font-size: 40px;"/></div>
     </form>
+  </div>
 
 
 
@@ -47,10 +50,10 @@
         </main>
 
         <footer>
-        <div class="redes">
+        <div>
             <a href="https://instagram.com/constelacionmusica" target="_blank"
               ><img
-                src="../image/logo instagram.jpg"
+                src="./image/logo instagram.png"
                 width="80px"
                 alt="Logo de instagram"
             /></a>
@@ -58,7 +61,7 @@
             <div class="logowpp">
                 <a href="https://web.whatsapp.com/"
                   target="_blank"><img
-                    src="../image/logo wpp.webp"
+                    src="../image/logo wpp.png"
                     alt="Logo de WhatsApp"
                     class="logowpp"
                 /></a>
