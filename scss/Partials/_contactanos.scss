@@ -1,0 +1,37 @@
+//CONTACTO
+$violeta: blueviolet;
+
+.maincont h1 {
+    font-size: 70px;
+    width: 500px;
+    height: 100px;
+    position: relative;
+    left: 100px;
+    margin-bottom: 20px;
+  }
+  #encabezado {
+    background-color: black;
+    font-size: 30px;
+  
+    .barradenavegacion {
+    }
+  }
+  
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 400px;
+    .email {
+      margin: 30px;
+    }
+    p {
+      margin-right: 200px;
+      margin-left: 300px;
+      margin-top: 20px;
+      font-size: 40px;
+      font-family: "Gill Sans MT";
+      height: auto;
+      width: auto;
+    }
+  }

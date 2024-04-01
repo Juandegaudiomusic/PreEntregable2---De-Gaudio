@@ -1,66 +1,278 @@
-/*comentario Multilinea
-NESTING:
-
-header {
-    background-color: red;
-
-    nav {
-      background-color: yellow;
-
-      ul {
-          display: flex;
-        list-style: none;
-        justify-content: space-between;
-
-        li {
-          // tanto la clase como el id de un elemento se las escriben en su padre
-          .spupi {color: green;
-          }
-          a {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-
-
-PARTIALS: sub archivos de css
-se nombran empezando con "_" y se importan en el archivo principal 
-@import "header";
-quedando en el archivo proncipal nada mas que los imports y algunas propiedades de estilos muy generales como el reseteo de margin y padding por ejemplo
-*margin: 0
-
-
-
-VARIABLES: algo asi como mini clases que almacenan valores, signo dolar $ y valor
-$coso: blueviolet
-
-
-
-EXTEND: un elemento hereda las propiedades de otro, tipo un sidechain seria
+/*EXTEND: un elemento hereda las propiedades de otro, tipo un sidechain seria
 a {
 @extend .clase 
+}*/
+#grilla {
+  display: flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: 300px 70px 80%;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title" "nav" "main";
+}
+#grilla .indexgrid1 {
+  grid-area: title;
+}
+#grilla .indexgrid1 .logoytitulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#grilla .indexgrid1 .logoytitulo .logoconste {
+  width: 200px;
+  height: 200px;
+}
+#grilla .indexgrid1 .logoytitulo span.encabezadoPrincipalSpan {
+  animation-name: gradiantemulticolor;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+}
+#grilla .indexgrid2 {
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  grid-area: nav;
+}
+#grilla .indexgrid2 #encabezado {
+  background-color: black;
+  font-size: 30px;
+}
+#grilla .indexgrid2 #encabezado .barradenavegacion li {
+  margin: 5px;
+}
+#grilla main .indexgrid3 {
+  grid-area: main;
+}
+#grilla main .indexgrid3 .secinicio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#grilla main .indexgrid3 .secinicio #carouselExampleIndicators {
+  max-width: 600px;
+  margin: 60px;
+}
+#grilla main .indexgrid3 .secinicio .bio {
+  font-family: calibri;
+  font-size: 30px;
+  margin: 50px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px black;
+  opacity: 80%;
+  border-radius: 20px;
+  width: 1000px;
+  height: 100%;
+  order: -1;
+}
+#grilla main .indexgrid3 .secinicio .bio a {
+  color: blueviolet;
+}
+#grilla main .indexgrid3 .secinicio .videoconste {
+  padding: 10px;
+  color: blueviolet;
+  margin: 60px;
+  border-radius: 20px;
 }
 
-MIXIN: 
-@mixin estilos-texto {
-font-size:
-font-family:
-etc
+#grillaintegrantes {
+  display: grid;
+  grid-template-rows: 250px 750px 750px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "nav nav" "fer juan" "lihue gonza";
+}
+#grillaintegrantes .intgrid1 {
+  grid-area: nav;
+}
+#grillaintegrantes .intgrid1 h1 {
+  font-size: 70px;
+  width: 400px;
+  height: 100px;
+  position: relative;
+  left: 100px;
+  margin-bottom: 20px;
+}
+#grillaintegrantes .intgrid1 #encabezado {
+  background-color: black;
+  font-size: 30px;
+}
+#grillaintegrantes .intgrid2 {
+  grid-area: fer;
+}
+#grillaintegrantes .intgrid2 .nombreint {
+  display: block;
+  width: 300px;
+  height: 40px;
+  color: blueviolet;
+  font-family: "Gill Sans MT";
+  font-size: 30px;
+  position: relative;
+  left: 80px;
+}
+#grillaintegrantes .intgrid2 .pint {
+  font-size: 15px;
+  display: flex;
+  width: 460px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 90%;
+}
+#grillaintegrantes .intgrid3 {
+  grid-area: juan;
+}
+#grillaintegrantes .intgrid3 .nombreint {
+  display: block;
+  width: 300px;
+  height: 40px;
+  color: blueviolet;
+  font-family: "Gill Sans MT";
+  font-size: 30px;
+  position: relative;
+  left: 80px;
+}
+#grillaintegrantes .intgrid3 .pint {
+  font-size: 15px;
+  display: flex;
+  width: 460px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 90%;
+}
+#grillaintegrantes .intgrid4 {
+  grid-area: lihue;
+}
+#grillaintegrantes .intgrid4 .nombreint {
+  display: block;
+  width: 300px;
+  height: 40px;
+  color: blueviolet;
+  color: blueviolet;
+  font-family: "Gill Sans MT";
+  font-size: 30px;
+  position: relative;
+  left: 80px;
+}
+#grillaintegrantes .intgrid4 .pint {
+  font-size: 15px;
+  display: flex;
+  width: 460px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 90%;
+}
+#grillaintegrantes .intgrid5 {
+  grid-area: gonza;
+}
+#grillaintegrantes .intgrid5 .nombreint {
+  display: block;
+  width: 300px;
+  height: 40px;
+  color: blueviolet;
+  font-family: "Gill Sans MT";
+  font-size: 30px;
+  position: relative;
+  left: 80px;
+}
+#grillaintegrantes .intgrid5 .pint {
+  font-size: 15px;
+  display: flex;
+  width: 460px;
+  height: auto;
+  margin-bottom: 10px;
+  opacity: 90%;
 }
 
-se alude luego escribiendo @include y el nombre del mixin
+.maincalend h1 {
+  font-size: 70px;
+  width: 400px;
+  height: 100px;
+  position: relative;
+  left: 100px;
+  margin-bottom: 20px;
+}
 
-si se combinaran mixin y variables se ecribe asi:
+#encabezado {
+  background-color: black;
+  font-size: 30px;
+}
+.maincalend iframe {
+  background-color: white;
+  opacity: 80%;
+}
 
-@mixin estilos-texto ($size, $family)
+.mainlan h1 {
+  font-size: 70px;
+  width: 500px;
+  height: 100px;
+  position: relative;
+  left: 100px;
+  margin-bottom: 20px;
+  font-family: "Gill Sans MT";
+}
 
-p {
-    @include estilos-texto(10px,arial) 
-    }
+#encabezado {
+  background-color: black;
+  font-size: 30px;
+}
+.spotify {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-osea: @include "nombre del mixin"(especificacion del valor) */
+.mainlan h1 {
+  font-size: 70px;
+  width: 500px;
+  height: 100px;
+  position: relative;
+  left: 100px;
+  margin-bottom: 20px;
+  font-family: "Gill Sans MT";
+}
+
+#encabezado {
+  background-color: black;
+  font-size: 30px;
+}
+.spotify {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.maincont h1 {
+  font-size: 70px;
+  width: 500px;
+  height: 100px;
+  position: relative;
+  left: 100px;
+  margin-bottom: 20px;
+}
+
+#encabezado {
+  background-color: black;
+  font-size: 30px;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: 400px;
+}
+.form .email {
+  margin: 30px;
+}
+.form p {
+  margin-right: 200px;
+  margin-left: 300px;
+  margin-top: 20px;
+  font-size: 40px;
+  font-family: "Gill Sans MT";
+  height: auto;
+  width: auto;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -139,10 +351,6 @@ ul {
   align-items: center;
 }
 
-/*#encabezado {
-  position: sticky;
-  top: 0px;
-}*/
 /*redundante?*/
 .barradenavegacion li {
   margin: 5px;
@@ -153,7 +361,7 @@ h2 {
 }
 
 h3 {
-  background-color: blueviolet;
+  color: blueviolet;
   display: inline;
 }
 
@@ -181,268 +389,12 @@ img {
   bottom: 20px;
 }
 
-#grilla {
-  display: flex;
-  flex-wrap: wrap;
-  display: grid;
-  grid-template-rows: 300px 70px 80%;
-  grid-template-columns: 1fr;
-  grid-template-areas: "title" "nav" "main";
-}
-#grilla .indexgrid1 {
-  grid-area: title;
-  /*border: 3px solid red;*/
-}
-#grilla .indexgrid1 .logoytitulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#grilla .indexgrid1 .logoytitulo .logoconste {
-  width: 200px;
-  height: 200px;
-}
-#grilla .indexgrid1 .logoytitulo span.encabezadoPrincipalSpan {
-  animation-name: gradiantemulticolor;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: 20s;
-  /*color: blueviolet;
-  font-family: "Gill Sans MT";*/
-}
-#grilla .indexgrid2 {
-  position: sticky;
-  top: 0px;
-  z-index: 9;
-  grid-area: nav;
-  /*border: 3px solid red;*/
-}
-#grilla .indexgrid2 #encabezado {
-  background-color: black;
-  font-size: 30px;
-}
-#grilla .indexgrid2 #encabezado .barradenavegacion li {
-  margin: 5px;
-}
-#grilla main .indexgrid3 {
-  grid-area: main;
-  /*border: 3px solid red;*/
-}
-#grilla main .indexgrid3 .secinicio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#grilla main .indexgrid3 .secinicio #carouselExampleIndicators {
-  max-width: 600px;
-  margin: 60px;
-}
-#grilla main .indexgrid3 .secinicio .bio {
-  font-family: calibri;
-  font-size: 30px;
-  margin: 50px;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 10px 10px 5px 0px black;
-  opacity: 80%;
-  border-radius: 20px;
-  width: 1000px;
-  height: 100%;
-  order: -1;
-}
-#grilla main .indexgrid3 .secinicio .bio a {
-  color: blueviolet;
-}
-#grilla main .indexgrid3 .secinicio .videoconste {
-  padding: 10px;
-  border: 30px solid blueviolet;
-  margin: 60px;
-  border-radius: 20px;
-}
-
-#grillaintegrantes {
-  display: grid;
-  grid-template-rows: 250px 750px 750px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "nav nav" "fer juan" "lihue gonza";
-}
-#grillaintegrantes .intgrid1 {
-  grid-area: nav;
-}
-#grillaintegrantes .intgrid1 h1 {
-  font-size: 70px;
-  width: 400px;
-  height: 100px;
-  position: relative;
-  left: 100px;
-  margin-bottom: 20px;
-}
-#grillaintegrantes .intgrid1 #encabezado {
-  background-color: black;
-  font-size: 30px;
-}
-#grillaintegrantes .intgrid2 {
-  grid-area: fer;
-}
-#grillaintegrantes .intgrid2 .nombreint {
-  display: block;
-  width: 300px;
-  height: 40px;
-  color: blueviolet;
-  font-family: "Gill Sans MT";
-  font-size: 30px;
-  position: relative;
-  left: 80px;
-}
-#grillaintegrantes .intgrid2 .pint {
-  font-size: 15px;
-  display: flex;
-  width: 460px;
-  height: auto;
-  margin-bottom: 10px;
-  opacity: 90%;
-}
-#grillaintegrantes .intgrid3 {
-  grid-area: juan;
-}
-#grillaintegrantes .intgrid3 .nombreint {
-  display: block;
-  width: 300px;
-  height: 40px;
-  color: blueviolet;
-  font-family: "Gill Sans MT";
-  font-size: 30px;
-  position: relative;
-  left: 80px;
-}
-#grillaintegrantes .intgrid3 .pint {
-  font-size: 15px;
-  display: flex;
-  width: 460px;
-  height: auto;
-  margin-bottom: 10px;
-  opacity: 90%;
-}
-#grillaintegrantes .intgrid4 {
-  grid-area: lihue;
-}
-#grillaintegrantes .intgrid4 .nombreint {
-  display: block;
-  width: 300px;
-  height: 40px;
-  color: blueviolet;
-  font-family: "Gill Sans MT";
-  font-size: 30px;
-  position: relative;
-  left: 80px;
-}
-#grillaintegrantes .intgrid4 .pint {
-  font-size: 15px;
-  display: flex;
-  width: 460px;
-  height: auto;
-  margin-bottom: 10px;
-  opacity: 90%;
-}
-#grillaintegrantes .intgrid5 {
-  grid-area: gonza;
-}
-#grillaintegrantes .intgrid5 .nombreint {
-  display: block;
-  width: 300px;
-  height: 40px;
-  color: blueviolet;
-  font-family: "Gill Sans MT";
-  font-size: 30px;
-  position: relative;
-  left: 80px;
-}
-#grillaintegrantes .intgrid5 .pint {
-  font-size: 15px;
-  display: flex;
-  width: 460px;
-  height: auto;
-  margin-bottom: 10px;
-  opacity: 90%;
-}
-
-.maincalend h1 {
-  font-size: 70px;
-  width: 400px;
-  height: 100px;
-  position: relative;
-  left: 100px;
-  margin-bottom: 20px;
-}
-
-#encabezado {
-  background-color: black;
-  font-size: 30px;
-}
-.maincalend iframe {
-  background-color: white;
-  opacity: 80%;
-}
-
-.mainlan h1 {
-  font-size: 70px;
-  width: 500px;
-  height: 100px;
-  position: relative;
-  left: 100px;
-  margin-bottom: 20px;
-  font-family: "Gill Sans MT";
-}
-
-#encabezado {
-  background-color: black;
-  font-size: 30px;
-}
-.spotify {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.maincont h1 {
-  font-size: 70px;
-  width: 500px;
-  height: 100px;
-  position: relative;
-  left: 100px;
-  margin-bottom: 20px;
-}
-
-#encabezado {
-  background-color: black;
-  font-size: 30px;
-}
-.form {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  left: 400px;
-}
-.form .email {
-  margin: 20px;
-}
-.form p {
-  margin-right: 200px;
-  margin-left: 300px;
-  font-size: 40px;
-  font-family: "Gill Sans MT";
-  height: auto;
-  width: auto;
-}
-
 /*Mobile*/
 @media only screen and (max-width: 500px) {
   #grilla {
-    grid-template-rows: 200px 400px 2000px;
+    grid-template-rows: 200px 600px 2000px;
     grid-template-columns: 1fr;
     grid-template-areas: "title" "nav" "main";
-  }
-  #grilla .indexgrid1 {
-    border: solid 3px red;
   }
   #grilla .indexgrid1 h1 {
     font-size: 70px;
@@ -456,36 +408,38 @@ img {
     height: 90px;
   }
   #grilla .indexgrid2 {
-    border: solid 3px red;
     position: initial;
   }
-  #grilla .indexgrid2 .barradenavegacion {
-    margin-top: 50px;
+  #grilla .indexgrid2 #encabezado {
+    height: 400px;
   }
-  #grilla .indexgrid2 .barradenavegacion a {
+  #grilla .indexgrid2 #encabezado .barradenavegacion {
+    margin-top: 50px;
+    display: flex;
+  }
+  #grilla .indexgrid2 #encabezado .barradenavegacion ul {
+    justify-content: center;
+    margin-left: 160px;
+    margin-top: 20px;
+  }
+  #grilla .indexgrid2 #encabezado .barradenavegacion ul a {
     padding-inline: 200px;
     margin-right: 20px;
+    font-size: 40px;
+    border: 2px solid white;
   }
-  #grilla .indexgrid2 .barradenavegacion a:hover {
+  #grilla .indexgrid2 #encabezado .barradenavegacion ul a:hover {
     color: red;
-  }
-  #grilla .indexgrid3 {
-    border: solid 3px red;
   }
   #grilla .indexgrid3 .secinicio .bio {
     height: auto;
     width: 370px;
     font-size: 50px;
     margin: 10px 5px 10px 10px;
-    border: 5px solid blueviolet;
-  }
-  #grilla .indexgrid3 #carouselExampleIndicators {
-    max-width: 400px;
-    margin: 10px;
   }
   #grilla .indexgrid3 .videoconste {
     width: 100%;
-    border: 10px solid blueviolet;
+    color: blueviolet;
     padding: 5px;
   }
   #grillaintegrantes {
@@ -495,7 +449,6 @@ img {
     grid-template-areas: "nav" "fer" "juan" "lihue" "gonza";
   }
   #grillaintegrantes .intgrid1 {
-    /*border: solid 3px red;*/
     position: initial;
   }
   #grillaintegrantes .intgrid1 .barradenavegacion {
@@ -514,6 +467,7 @@ img {
   }
   #grillaintegrantes .intgrid1 .barradenavegacion li a:hover {
     color: red;
+    font-size: 14px;
   }
   #grillaintegrantes .intgrid1 h1 {
     font-size: 40px;
@@ -529,11 +483,112 @@ img {
   #grillaintegrantes .pint {
     width: auto;
   }
+  /*CALENDARIO*/
+  .maincalend h1 {
+    font-size: 40px;
+    width: 300px;
+    height: 60px;
+    position: initial;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .barradenavegacion {
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 500px;
+    height: 200px;
+  }
+  .barradenavegacion li {
+    margin: 0px;
+  }
+  .barradenavegacion li a {
+    padding-inline: 100px;
+    font-size: 14px;
+    border: solid 1px white;
+  }
+  .barradenavegacion li a:hover {
+    color: red;
+    font-size: 14px;
+  }
+  /*LANZAMIENTOS*/
+  .mainlan h1 {
+    font-size: 40px;
+    width: 300px;
+    height: 60px;
+    position: initial;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .barradenavegacion {
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 500px;
+    height: 200px;
+  }
+  .barradenavegacion li {
+    margin: 0px;
+  }
+  .barradenavegacion li a {
+    padding-inline: 100px;
+    font-size: 14px;
+    border: solid 1px white;
+  }
+  .barradenavegacion li a:hover {
+    color: red;
+    font-size: 14px;
+  }
+  /*CONTACTANOS*/
+  .maincont h1 {
+    font-size: 40px;
+    width: 300px;
+    height: 60px;
+    position: initial;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .barradenavegacion {
+    margin-left: 0px;
+    margin-top: 50px;
+    width: 500px;
+    height: 200px;
+  }
+  .barradenavegacion li {
+    margin: 0px;
+  }
+  .barradenavegacion li a {
+    padding-inline: 100px;
+    font-size: 14px;
+    border: solid 1px white;
+  }
+  .barradenavegacion li a:hover {
+    color: red;
+    font-size: 14px;
+  }
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    position: initial;
+  }
+  .form p {
+    margin: 0;
+    font-size: 30px;
+    font-family: "Gill Sans MT";
+    height: auto;
+    width: auto;
+    margin-left: 110px;
+  }
+  .form .email .inputemail {
+    width: 430px;
+  }
+  .form textarea {
+    margin: 20px;
+    width: 460px;
+    height: 300px;
+  }
   .logowpp {
     width: 70px;
   }
 }
-/*ANIMACIONES
-*/
 
 /*# sourceMappingURL=style.css.map */

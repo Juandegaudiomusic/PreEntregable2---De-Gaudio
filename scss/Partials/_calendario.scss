@@ -1,0 +1,24 @@
+//CALENDARIO
+$violeta: blueviolet;
+.maincalend h1 {
+    font-size: 70px;
+    width: 400px;
+    height: 100px;
+    position: relative;
+    left: 100px;
+    margin-bottom: 20px;
+  }
+  #encabezado {
+    background-color: black;
+    font-size: 30px;
+  
+    .barradenavegacion {
+    }
+  }
+  
+  .maincalend iframe {
+    background-color: white;
+    opacity: 80%;
+  }
+  
+  

@@ -1,0 +1,97 @@
+//INDEX
+
+$violeta: blueviolet;
+
+#grilla {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 300px 70px 80%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "nav"
+      "main";
+  
+    .indexgrid1 {
+      grid-area: title;
+      
+      .logoytitulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        .logoconste {
+          width: 200px;
+          height: 200px;
+        }
+        span.encabezadoPrincipalSpan {
+          animation-name: gradiantemulticolor;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation-duration: 20s;
+          
+        }
+      }
+    }
+    .indexgrid2 {
+      position: sticky;
+      top: 0px;
+      z-index: 9;
+      grid-area: nav;
+      
+  
+      #encabezado {
+        background-color: black;
+        font-size: 30px;
+  
+        .barradenavegacion {
+          li {
+            margin: 5px;
+          }
+        }
+      }
+    }
+    main {
+      .indexgrid3 {
+        grid-area: main;
+       
+  
+        .secinicio {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+  
+          #carouselExampleIndicators {
+            max-width: 600px;
+            margin: 60px;
+          }
+  
+          .bio {
+            font-family: calibri;
+            font-size: 30px;
+            margin: 50px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 10px 10px 5px 0px black;
+            opacity: 80%;
+            border-radius: 20px;
+            width: 1000px;
+            height: 100%;
+            order: -1;
+  
+            a {
+              color: $violeta;
+            }
+          }
+  
+          .videoconste {
+            padding: 10px;
+            color: $violeta;
+            margin: 60px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }

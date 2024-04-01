@@ -1,0 +1,24 @@
+ //LANZAMIENTOS
+ $violeta: blueviolet;
+ .mainlan h1 {
+    font-size: 70px;
+    width: 500px;
+    height: 100px;
+    position: relative;
+    left: 100px;
+    margin-bottom: 20px;
+    font-family: "Gill Sans MT";
+  }
+  #encabezado {
+    background-color: black;
+    font-size: 30px;
+  
+    .barradenavegacion {
+    }
+  }
+  
+  .spotify {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
