@@ -1,27 +1,15 @@
-
-/*EXTEND: un elemento hereda las propiedades de otro, tipo un sidechain seria
-a {
-@extend .clase 
-}*/
-
-
-
 //PRINCIPAL
 $violeta: blueviolet;
-@import "partials/index";
-@import "partials/integrantes";
-@import "partials/calendario";
-@import "partials/lanzamientos";
-@import "partials/contactanos";
-
-
+@import "./Partials/index";
+@import "./Partials/integrantes";
+@import "./Partials/calendario";
+@import "./Partials/lanzamientos";
+@import "./Partials/contactanos";
 
 * {
   margin: 0;
   padding: 0;
 }
-
-
 
 @keyframes gradiantemulticolor {
   0% {
@@ -106,7 +94,6 @@ ul {
   align-items: center;
 }
 
-
 /*redundante?*/
 .barradenavegacion li {
   margin: 5px;
@@ -145,7 +132,6 @@ img {
   bottom: 20px;
 }
 
-
 //QUERIES
 
 /*Mobile*/
@@ -181,6 +167,7 @@ img {
 
         .barradenavegacion {
           margin-top: 50px;
+          margin-left: 20px;
           display: flex;
 
           ul {
@@ -210,7 +197,6 @@ img {
           width: 370px;
           font-size: 50px;
           margin: 10px 5px 10px 10px;
-          
         }
       }
 
@@ -223,25 +209,36 @@ img {
   }
 
   //INTEGRANTES
+  body {
   #grillaintegrantes {
     display: grid;
-    grid-template-rows: 360px 750px 750px;
-    grid-template-columns: 500px;
+    grid-template-rows: 400px 800px 800px 800px 800px;
+    grid-template-columns: 1fr;
     grid-template-areas:
+      
       "nav"
-      "fer"
+      "fer" 
       "juan"
-      "lihue"
+      "lihue "
       "gonza";
+    
 
     .intgrid1 {
-          position: initial;
+      
+      h1 {
+        font-size: 40px;
+        width: 300px;
+        height: 60px;
+        position: initial;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
 
       .barradenavegacion {
-        margin-left: 0px;
-        margin-top: 50px;
-        width: 500px;
-        height: 200px;
+        margin-left: -15px;
+      margin-top: 50px;
+      width: 500px;
+      height: 250px;
 
         li {
           margin: 0px;
@@ -258,21 +255,9 @@ img {
           }
         }
       }
-      h1 {
-        font-size: 40px;
-        width: 300px;
-        height: 60px;
-        position: initial;
-        margin-top: 10px;
-        margin-bottom: 20px;
-      }
     }
-    img {
-      width: auto;
-    }
-    .pint {
-      width: auto;
-    }
+  }
+   
   }
 
   /*CALENDARIO*/
@@ -285,25 +270,24 @@ img {
       margin-top: 10px;
       margin-bottom: 20px;
     }
-  }
+    .barradenavegacion {
+      margin-left: -15px;
+      margin-top: 50px;
+      width: 500px;
+      height: 250px;
 
-  .barradenavegacion {
-    margin-left: 0px;
-    margin-top: 50px;
-    width: 500px;
-    height: 200px;
+      li {
+        margin: 0px;
 
-    li {
-      margin: 0px;
-
-      a {
-        padding-inline: 100px;
-        font-size: 14px;
-        border: solid 1px white;
-
-        &:hover {
-          color: red;
+        a {
+          padding-inline: 100px;
           font-size: 14px;
+          border: solid 1px white;
+
+          &:hover {
+            color: red;
+            font-size: 14px;
+          }
         }
       }
     }
@@ -323,10 +307,10 @@ img {
   }
 
   .barradenavegacion {
-    margin-left: 0px;
+    margin-left: -15px;
     margin-top: 50px;
     width: 500px;
-    height: 200px;
+    height: 250px;
 
     li {
       margin: 0px;
@@ -357,10 +341,10 @@ img {
   }
 
   .barradenavegacion {
-    margin-left: 0px;
+    margin-left: -15px;
     margin-top: 50px;
     width: 500px;
-    height: 200px;
+    height: 250px;
 
     li {
       margin: 0px;

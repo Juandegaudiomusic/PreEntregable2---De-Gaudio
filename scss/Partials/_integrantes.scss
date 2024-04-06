@@ -1,17 +1,18 @@
 //INTEGRANTES
 $violeta: blueviolet;
-#grillaintegrantes {
+body {
+  #grillaintegrantes {
     display: grid;
-    grid-template-rows: 250px 750px 750px;
+    grid-template-rows: 250px 800px 800px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "nav nav"
       "fer juan"
       "lihue gonza";
-  
+
     .intgrid1 {
       grid-area: nav;
-  
+
       h1 {
         font-size: 70px;
         width: 400px;
@@ -20,29 +21,29 @@ $violeta: blueviolet;
         left: 100px;
         margin-bottom: 20px;
       }
-  
+
       #encabezado {
         background-color: black;
         font-size: 30px;
-  
+
         .barradenavegacion /*redundante?*/ {
         }
       }
     }
     .intgrid2 {
       grid-area: fer;
-  
+
       .nombreint {
         display: block;
         width: 300px;
-        height: 40px;
+        height: 80px;
         color: $violeta;
         font-family: "Gill Sans MT";
         font-size: 30px;
         position: relative;
         left: 80px;
       }
-  
+
       .pint {
         font-size: 15px;
         display: flex;
@@ -52,21 +53,21 @@ $violeta: blueviolet;
         opacity: 90%;
       }
     }
-  
+
     .intgrid3 {
       grid-area: juan;
-  
+
       .nombreint {
         display: block;
         width: 300px;
-        height: 40px;
+        height: 80px;
         color: $violeta;
         font-family: "Gill Sans MT";
         font-size: 30px;
         position: relative;
         left: 80px;
       }
-  
+
       .pint {
         font-size: 15px;
         display: flex;
@@ -76,21 +77,21 @@ $violeta: blueviolet;
         opacity: 90%;
       }
     }
-  
+
     .intgrid4 {
       grid-area: lihue;
-  
+
       .nombreint {
         display: block;
         width: 300px;
-        height: 40px;
+        height: 80px;
         color: $violeta;
         font-family: "Gill Sans MT";
         font-size: 30px;
         position: relative;
         left: 80px;
       }
-  
+
       .pint {
         font-size: 15px;
         display: flex;
@@ -100,21 +101,21 @@ $violeta: blueviolet;
         opacity: 90%;
       }
     }
-  
+
     .intgrid5 {
       grid-area: gonza;
-  
+
       .nombreint {
         display: block;
         width: 300px;
-        height: 40px;
+        height: 80px;
         color: $violeta;
         font-family: "Gill Sans MT";
         font-size: 30px;
         position: relative;
         left: 80px;
       }
-  
+
       .pint {
         font-size: 15px;
         display: flex;
@@ -125,4 +126,4 @@ $violeta: blueviolet;
       }
     }
   }
-  
+}

@@ -1,7 +1,3 @@
-/*EXTEND: un elemento hereda las propiedades de otro, tipo un sidechain seria
-a {
-@extend .clase 
-}*/
 #grilla {
   display: flex;
   flex-wrap: wrap;
@@ -76,16 +72,16 @@ a {
   border-radius: 20px;
 }
 
-#grillaintegrantes {
+body #grillaintegrantes {
   display: grid;
-  grid-template-rows: 250px 750px 750px;
+  grid-template-rows: 250px 800px 800px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "nav nav" "fer juan" "lihue gonza";
 }
-#grillaintegrantes .intgrid1 {
+body #grillaintegrantes .intgrid1 {
   grid-area: nav;
 }
-#grillaintegrantes .intgrid1 h1 {
+body #grillaintegrantes .intgrid1 h1 {
   font-size: 70px;
   width: 400px;
   height: 100px;
@@ -93,24 +89,24 @@ a {
   left: 100px;
   margin-bottom: 20px;
 }
-#grillaintegrantes .intgrid1 #encabezado {
+body #grillaintegrantes .intgrid1 #encabezado {
   background-color: black;
   font-size: 30px;
 }
-#grillaintegrantes .intgrid2 {
+body #grillaintegrantes .intgrid2 {
   grid-area: fer;
 }
-#grillaintegrantes .intgrid2 .nombreint {
+body #grillaintegrantes .intgrid2 .nombreint {
   display: block;
   width: 300px;
-  height: 40px;
+  height: 80px;
   color: blueviolet;
   font-family: "Gill Sans MT";
   font-size: 30px;
   position: relative;
   left: 80px;
 }
-#grillaintegrantes .intgrid2 .pint {
+body #grillaintegrantes .intgrid2 .pint {
   font-size: 15px;
   display: flex;
   width: 460px;
@@ -118,20 +114,20 @@ a {
   margin-bottom: 10px;
   opacity: 90%;
 }
-#grillaintegrantes .intgrid3 {
+body #grillaintegrantes .intgrid3 {
   grid-area: juan;
 }
-#grillaintegrantes .intgrid3 .nombreint {
+body #grillaintegrantes .intgrid3 .nombreint {
   display: block;
   width: 300px;
-  height: 40px;
+  height: 80px;
   color: blueviolet;
   font-family: "Gill Sans MT";
   font-size: 30px;
   position: relative;
   left: 80px;
 }
-#grillaintegrantes .intgrid3 .pint {
+body #grillaintegrantes .intgrid3 .pint {
   font-size: 15px;
   display: flex;
   width: 460px;
@@ -139,21 +135,20 @@ a {
   margin-bottom: 10px;
   opacity: 90%;
 }
-#grillaintegrantes .intgrid4 {
+body #grillaintegrantes .intgrid4 {
   grid-area: lihue;
 }
-#grillaintegrantes .intgrid4 .nombreint {
+body #grillaintegrantes .intgrid4 .nombreint {
   display: block;
   width: 300px;
-  height: 40px;
-  color: blueviolet;
+  height: 80px;
   color: blueviolet;
   font-family: "Gill Sans MT";
   font-size: 30px;
   position: relative;
   left: 80px;
 }
-#grillaintegrantes .intgrid4 .pint {
+body #grillaintegrantes .intgrid4 .pint {
   font-size: 15px;
   display: flex;
   width: 460px;
@@ -161,20 +156,20 @@ a {
   margin-bottom: 10px;
   opacity: 90%;
 }
-#grillaintegrantes .intgrid5 {
+body #grillaintegrantes .intgrid5 {
   grid-area: gonza;
 }
-#grillaintegrantes .intgrid5 .nombreint {
+body #grillaintegrantes .intgrid5 .nombreint {
   display: block;
   width: 300px;
-  height: 40px;
+  height: 80px;
   color: blueviolet;
   font-family: "Gill Sans MT";
   font-size: 30px;
   position: relative;
   left: 80px;
 }
-#grillaintegrantes .intgrid5 .pint {
+body #grillaintegrantes .intgrid5 .pint {
   font-size: 15px;
   display: flex;
   width: 460px;
@@ -199,26 +194,6 @@ a {
 .maincalend iframe {
   background-color: white;
   opacity: 80%;
-}
-
-.mainlan h1 {
-  font-size: 70px;
-  width: 500px;
-  height: 100px;
-  position: relative;
-  left: 100px;
-  margin-bottom: 20px;
-  font-family: "Gill Sans MT";
-}
-
-#encabezado {
-  background-color: black;
-  font-size: 30px;
-}
-.spotify {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
 }
 
 .mainlan h1 {
@@ -415,6 +390,7 @@ img {
   }
   #grilla .indexgrid2 #encabezado .barradenavegacion {
     margin-top: 50px;
+    margin-left: 20px;
     display: flex;
   }
   #grilla .indexgrid2 #encabezado .barradenavegacion ul {
@@ -442,34 +418,13 @@ img {
     color: blueviolet;
     padding: 5px;
   }
-  #grillaintegrantes {
+  body #grillaintegrantes {
     display: grid;
-    grid-template-rows: 360px 750px 750px;
-    grid-template-columns: 500px;
-    grid-template-areas: "nav" "fer" "juan" "lihue" "gonza";
+    grid-template-rows: 400px 800px 800px 800px 800px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav" "fer" "juan" "lihue " "gonza";
   }
-  #grillaintegrantes .intgrid1 {
-    position: initial;
-  }
-  #grillaintegrantes .intgrid1 .barradenavegacion {
-    margin-left: 0px;
-    margin-top: 50px;
-    width: 500px;
-    height: 200px;
-  }
-  #grillaintegrantes .intgrid1 .barradenavegacion li {
-    margin: 0px;
-  }
-  #grillaintegrantes .intgrid1 .barradenavegacion li a {
-    padding-inline: 100px;
-    font-size: 14px;
-    border: solid 1px white;
-  }
-  #grillaintegrantes .intgrid1 .barradenavegacion li a:hover {
-    color: red;
-    font-size: 14px;
-  }
-  #grillaintegrantes .intgrid1 h1 {
+  body #grillaintegrantes .intgrid1 h1 {
     font-size: 40px;
     width: 300px;
     height: 60px;
@@ -477,11 +432,23 @@ img {
     margin-top: 10px;
     margin-bottom: 20px;
   }
-  #grillaintegrantes img {
-    width: auto;
+  body #grillaintegrantes .intgrid1 .barradenavegacion {
+    margin-left: -15px;
+    margin-top: 50px;
+    width: 500px;
+    height: 250px;
   }
-  #grillaintegrantes .pint {
-    width: auto;
+  body #grillaintegrantes .intgrid1 .barradenavegacion li {
+    margin: 0px;
+  }
+  body #grillaintegrantes .intgrid1 .barradenavegacion li a {
+    padding-inline: 100px;
+    font-size: 14px;
+    border: solid 1px white;
+  }
+  body #grillaintegrantes .intgrid1 .barradenavegacion li a:hover {
+    color: red;
+    font-size: 14px;
   }
   /*CALENDARIO*/
   .maincalend h1 {
@@ -492,21 +459,21 @@ img {
     margin-top: 10px;
     margin-bottom: 20px;
   }
-  .barradenavegacion {
-    margin-left: 0px;
+  .maincalend .barradenavegacion {
+    margin-left: -15px;
     margin-top: 50px;
     width: 500px;
-    height: 200px;
+    height: 250px;
   }
-  .barradenavegacion li {
+  .maincalend .barradenavegacion li {
     margin: 0px;
   }
-  .barradenavegacion li a {
+  .maincalend .barradenavegacion li a {
     padding-inline: 100px;
     font-size: 14px;
     border: solid 1px white;
   }
-  .barradenavegacion li a:hover {
+  .maincalend .barradenavegacion li a:hover {
     color: red;
     font-size: 14px;
   }
@@ -520,10 +487,10 @@ img {
     margin-bottom: 20px;
   }
   .barradenavegacion {
-    margin-left: 0px;
+    margin-left: -15px;
     margin-top: 50px;
     width: 500px;
-    height: 200px;
+    height: 250px;
   }
   .barradenavegacion li {
     margin: 0px;
@@ -547,10 +514,10 @@ img {
     margin-bottom: 20px;
   }
   .barradenavegacion {
-    margin-left: 0px;
+    margin-left: -15px;
     margin-top: 50px;
     width: 500px;
-    height: 200px;
+    height: 250px;
   }
   .barradenavegacion li {
     margin: 0px;
